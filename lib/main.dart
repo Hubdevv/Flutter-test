@@ -30,7 +30,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     fetchPosts();
   }
@@ -38,13 +37,30 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+     //theme: ThemeData.dark(),
       home: Scaffold(
         body: ListView.builder(
             itemCount: _postsJson.length = 50,
             itemBuilder: (context, i) {
               final post = _postsJson[i];
-              return Text(
-                  "Title :${post["title"]}\n Body: ${post["body"]}\n\n");
+              return RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: "     ${post["title"]}\n",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            height: 3,
+                            fontSize: 18,
+                            color: Colors.purple[600])),
+                    TextSpan(
+                      text: "       ${post["body"]}",
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.black),
+                    )
+                  ],
+                ),
+              );
             }),
       ),
     );
