@@ -1,7 +1,7 @@
 # silak
 
-A new Flutter project.
-
+ Flutter project to display 50 posts and sort the title alphabetically.
+ 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -18,5 +18,6 @@ samples, guidance on mobile development, and a full API reference.
 - Flutter  version 2.10.5
 - Dart     version 2.16.2
 - DevTools version 2.9.2
+- android studio arctic fox 2020.3.1 patch 4
 
 installed dependencies:  http: ^0.13.4
